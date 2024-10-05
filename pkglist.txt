@@ -27,6 +27,7 @@ git
 gnome-keyring
 imagemagick
 imv
+jaq
 jq
 lazygit
 libnotify
