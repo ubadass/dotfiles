@@ -19,6 +19,7 @@
     (battery :capacity {EWW_BATTERY.BAT1.capacity}
              :icons '["󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"]'
              :full_icon "󱈑"
+             :critical_icon "󰂃"
              :is_full {EWW_BATTERY.BAT1.status == "Full"}
              :is_charging {EWW_BATTERY.BAT1.status == "Charging"}
              :is_critical {EWW_BATTERY.BAT1.capacity <= 20}
@@ -53,12 +54,16 @@
            :value value
            :onchange onchange)))
 
-(defwidget battery [capacity icons full_icon is_charging is_full is_critical]
+(defwidget battery [capacity icons full_icon critical_icon is_charging is_full is_critical]
   (tooltip 
     (label :text capacity)
     (label 
       :class {is_charging ? "battery charging" : is_critical ? "battery critical" : "battery"}
-      :text {is_full ? full_icon : jq(icons, 'length as $len|to_entries as $list|[range(0;100/$len)]|map($list[])|sort_by(.key)|map(.value)')['${capacity - 1}']}
+      :text {
+        is_full ? full_icon
+                : is_critical ? critical_icon 
+                : jq(icons, 'length as $len|to_entries as $list|[range(0;100/$len)]|map($list[])|sort_by(.key)|map(.value)')['${capacity - 1}']
+      }
     )
   )
 )
