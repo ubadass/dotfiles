@@ -61,7 +61,7 @@
       :class {is_charging ? "battery charging" : is_critical ? "battery critical" : "battery"}
       :text {
         is_full ? full_icon
-                : is_critical ? critical_icon 
+                : is_critical && !is_charging ? critical_icon 
                 : jq(icons, 'length as $len|to_entries as $list|[range(0;100/$len)]|map($list[])|sort_by(.key)|map(.value)')['${capacity - 1}']
       }
     )
