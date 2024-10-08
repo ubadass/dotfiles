@@ -49,7 +49,6 @@ openssh
 p7zip
 pamixer
 papirus-icon-theme
-paru
 pavucontrol
 pipewire
 pipewire-alsa

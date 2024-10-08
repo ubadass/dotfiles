@@ -223,10 +223,13 @@ environment {
 // See the binds section below for more spawn examples.
 // spawn-at-startup "alacritty" "-e" "fish"
 spawn-at-startup "xwayland-satellite" ":12"
+
 spawn-at-startup "/usr/lib/polkit-kde-authentication-agent-1"
-spawn-at-startup "bash" "-c" "swww-daemon & swww img ~/Pictures/wallpaper.png"
+
 spawn-at-startup "mako"
+
 spawn-at-startup "eww" "open" "ewwbar"
+
 spawn-at-startup "bash" "-c" "wl-paste --type text --watch cliphist store"
 spawn-at-startup "bash" "-c" "wl-paste --type image --watch cliphist store"
 // Uncomment this line to ask the clients to omit their client-side decorations if possible.
