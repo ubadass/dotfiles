@@ -31,7 +31,7 @@ function yy() {
 	rm -f -- "$tmp"
 }
 
-alias ls='eza --group-directories-first'
+alias ls='eza --group-directories-first -g'
 alias grep='grep --color=auto'
 
 PS1='[\u@\h \W]\$ '
