@@ -5,6 +5,8 @@ base
 base-devel
 bash-completion
 bibata-cursor-theme
+bluez
+bluez-utils
 bottom
 brightnessctl
 cava
@@ -66,6 +68,7 @@ sof-firmware
 starship
 ttf-liberation
 ttf-meslo-nerd
+ttf-twemoji
 udisks2
 unzip
 vulkan-radeon
