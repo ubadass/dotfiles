@@ -851,6 +851,8 @@ require('lazy').setup({
   { -- Collection of various small independent plugins/modules
     'echasnovski/mini.nvim',
     config = function()
+      require('mini.files').setup()
+      vim.keymap.set('n', '<leader>\\', '<CMD>lua MiniFiles.open()<CR>', { desc = 'Open parent directory' })
       -- Better Around/Inside textobjects
       --
       -- Examples:
