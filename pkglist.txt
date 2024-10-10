@@ -66,6 +66,7 @@ rustow-git
 satty
 sof-firmware
 starship
+systemd-resolvconf
 ttf-liberation
 ttf-meslo-nerd
 ttf-twemoji
@@ -73,6 +74,7 @@ udisks2
 unzip
 vulkan-radeon
 wget
+wireguard-tools
 wireplumber
 xdg-desktop-portal-gnome
 xdg-desktop-portal-gtk
