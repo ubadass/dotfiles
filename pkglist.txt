@@ -18,11 +18,9 @@ eww
 expac
 eza
 fastfetch
-fd
 ffmpegthumbnailer
 firefox-wayland-hg
 fzf
-git
 gnome-keyring
 hwdetect
 imagemagick
@@ -42,7 +40,6 @@ linux-headers
 mako
 man-db
 man-pages
-mesa
 mesa-vdpau
 mpv
 neovim
@@ -53,7 +50,6 @@ p7zip
 pamixer
 papirus-icon-theme
 pavucontrol
-pipewire
 pipewire-alsa
 pipewire-jack
 pipewire-pulse
@@ -62,13 +58,11 @@ polkit-kde-agent
 poppler
 qt6-wayland
 qt6ct
-ripgrep
 rustow-git
 satty
 sof-firmware
 starship
 systemd-resolvconf
-ttf-liberation
 ttf-meslo-nerd
 ttf-twemoji
 udisks2
