@@ -1,4 +1,4 @@
-alacritty
+alacritty-git
 amd-ucode
 anyrun-git
 base
@@ -15,11 +15,12 @@ clang
 cliphist
 efibootmgr
 eww
+expac
 eza
 fastfetch
 fd
 ffmpegthumbnailer
-firefox
+firefox-wayland-hg
 fzf
 git
 gnome-keyring
