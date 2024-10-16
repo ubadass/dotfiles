@@ -10,7 +10,6 @@ bluez-utils
 bottom
 brightnessctl
 cava
-chromium
 clang
 cliphist
 efibootmgr
@@ -44,6 +43,10 @@ mesa-vdpau
 mpv
 neovim
 niri
+noto-fonts
+noto-fonts-cjk
+noto-fonts-emoji
+noto-fonts-extra
 nwg-look
 openssh
 p7zip
@@ -64,7 +67,6 @@ sof-firmware
 starship
 systemd-resolvconf
 ttf-meslo-nerd
-ttf-twemoji
 udisks2
 unzip
 vulkan-radeon
