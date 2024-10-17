@@ -43,7 +43,6 @@ mesa-vdpau
 mpv
 neovim
 niri
-noto-fonts
 noto-fonts-cjk
 noto-fonts-emoji
 noto-fonts-extra
