@@ -7,7 +7,7 @@ Config(
   x: Fraction(0.5),
 
   // The vertical position, works the same as `x`
-  y: Absolute(5),
+  y: Absolute(10),
 
   // The width of the runner
   width: Absolute(800),
@@ -35,15 +35,9 @@ Config(
 
   // Limit amount of entries shown in total
   max_entries: None,
-
-  // The terminal used for running terminal based desktop entries, if left as `None` a static list of terminals is used
-  // to determine what terminal to use.
-  terminal: Some("alacritty"),
+  
   // List of plugins to be loaded by default, can be specified with a relative path to be loaded from the
   // `<anyrun config dir>/plugins` directory or with an absolute path to just load the file the path points to.
-
-  // prefix to triggering libdictionary
-  prefix: ":def",
   plugins: [
     "libapplications.so",
     "libdictionary.so",
