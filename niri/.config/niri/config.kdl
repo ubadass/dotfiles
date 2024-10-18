@@ -286,7 +286,6 @@ window-rule {
 window-rule {
     match app-id="mpv"
     match app-id="imv"
-    match app-id=r#"^Gimp"#
 
     open-maximized true
     variable-refresh-rate true
