@@ -20,7 +20,6 @@ fastfetch
 ffmpegthumbnailer
 firefox-wayland-hg
 fzf
-gimp
 gnome-keyring
 hwdetect
 imagemagick
