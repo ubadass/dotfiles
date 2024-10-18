@@ -20,6 +20,7 @@ fastfetch
 ffmpegthumbnailer
 firefox-wayland-hg
 fzf
+gimp
 gnome-keyring
 hwdetect
 imagemagick
@@ -61,7 +62,6 @@ poppler
 qt6-wayland
 qt6ct
 rustow-git
-satty
 sof-firmware
 starship
 systemd-resolvconf
