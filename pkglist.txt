@@ -13,7 +13,6 @@ cava
 clang
 cliphist
 efibootmgr
-eww
 expac
 eza
 fastfetch
@@ -28,6 +27,7 @@ inotify-tools
 iwd
 jq
 lazygit
+libdbusmenu-gtk3
 libnotify
 libva-mesa-driver
 libva-vdpau-driver
