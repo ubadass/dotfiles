@@ -176,7 +176,7 @@ layout {
         active-color "#ffc87f"
         inactive-color "#505050"
 
-        active-gradient from="#cba6f7ee" to="#f38ba8ee" angle=45
+        active-gradient from="#89b4faee" to="#cba6f7ee" angle=45
         inactive-gradient from="#505050" to="#808080" angle=45
         // active-gradient from="#ffbb66" to="#ffc880" angle=45 relative-to="workspace-view"
         // inactive-gradient from="#505050" to="#808080" angle=45 relative-to="workspace-view"
