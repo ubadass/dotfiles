@@ -218,16 +218,11 @@ environment {
 // which may be more convenient to use.
 // See the binds section below for more spawn examples.
 // spawn-at-startup "alacritty" "-e" "fish"
-spawn-at-startup "xwayland-satellite" ":12"
 
-spawn-at-startup "/usr/lib/polkit-kde-authentication-agent-1"
+//spawn-at-startup "xwayland-satellite" ":12"
 
-spawn-at-startup "mako"
+spawn-at-startup "bash" "-c" "eww daemon && eww open ewwbar"
 
-spawn-at-startup "eww" "open" "ewwbar"
-
-spawn-at-startup "bash" "-c" "wl-paste --type text --watch cliphist store"
-spawn-at-startup "bash" "-c" "wl-paste --type image --watch cliphist store"
 // Uncomment this line to ask the clients to omit their client-side decorations if possible.
 // If the client will specifically ask for CSD, the request will be honored.
 // Additionally, clients will be informed that they are tiled, removing some rounded corners.
