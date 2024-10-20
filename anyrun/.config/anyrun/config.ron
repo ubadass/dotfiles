@@ -41,5 +41,6 @@ Config(
   plugins: [
     "libapplications.so",
     "libdictionary.so",
+    "libstdin.so",
   ],
 )
