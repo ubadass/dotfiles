@@ -1,0 +1,91 @@
+(defwidget bar []
+  (box :class "bar" :orientation "h"
+    (datetime :now {EWW_TIME})
+    (sidestuff)
+  )
+)
+
+(defwidget sidestuff []
+  (box :class "sidestuff" :orientation "h" :spacing 20 :space-evenly false :halign "end"
+    (systray :spacing 10 :orientation "h" :prepend-new true)
+    (eventbox :class "audio"
+              :onhover 'eww update _volume="`wpctl get-volume @DEFAULT_AUDIO_SINK@`"'
+              :onclick "pavucontrol&"
+      (tooltip
+        (label :text _volume)
+        (label :class "icon" :text "󰓃")
+      )
+    )
+    (battery :capacity {EWW_BATTERY.BAT1.capacity}
+             :icons '["󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"]'
+             :full_icon "󱈑"
+             :critical_icon "󰂃"
+             :is_full {EWW_BATTERY.BAT1.status == "Full"}
+             :is_charging {EWW_BATTERY.BAT1.status == "Charging"}
+             :is_critical {EWW_BATTERY.BAT1.capacity <= 20}
+    )
+  )
+)
+
+(defwidget workspaces []
+  (box :class "workspaces"
+       :orientation "h"
+       :space-evenly true
+       :halign "start"
+       :spacing 10
+    (button :onclick "wmctrl -s 0" 1)
+    (button :onclick "wmctrl -s 1" 2)
+    (button :onclick "wmctrl -s 2" 3)
+    (button :onclick "wmctrl -s 3" 4)
+    (button :onclick "wmctrl -s 4" 5)
+    (button :onclick "wmctrl -s 5" 6)
+    (button :onclick "wmctrl -s 6" 7)
+    (button :onclick "wmctrl -s 7" 8)
+    (button :onclick "wmctrl -s 8" 9)))
+
+(defwidget metric [label value onchange]
+  (box :orientation "h"
+       :class "metric"
+       :space-evenly false
+    (box :class "label" label)
+    (scale :min 0
+           :max 101
+           :active {onchange != ""}
+           :value value
+           :onchange onchange)))
+
+(defwidget battery [capacity icons full_icon critical_icon is_charging is_full is_critical]
+  (tooltip 
+    (label :text capacity)
+    (label 
+      :class {is_charging ? "battery charging" : is_critical ? "battery critical" : "battery"}
+      :text {
+        is_full ? full_icon
+                : is_critical && !is_charging ? critical_icon 
+                : jq(icons, 'length as $len|to_entries as $list|[range(0;100/$len)]|map($list[])|sort_by(.key)|map(.value)')['${capacity - 1}']
+      }
+    )
+  )
+)
+
+(defwidget datetime [now]
+  (tooltip
+    (label :text {formattime(now, "%a %b %d, %Y")})
+    (label :class "time"
+           :text {formattime(now, "%r")}
+    )
+  )
+)
+
+(defvar _volume '')
+
+(defwindow ewwbar
+  :monitor 0
+  :windowtype "dock"
+  :geometry (geometry :x "0%"
+                      :y "10px"
+                      :width "99%"
+                      :height "10px"
+                      :anchor "top center")
+  :exclusive true
+  (bar))
