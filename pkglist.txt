@@ -5,8 +5,6 @@ base
 base-devel
 bash-completion
 bibata-cursor-theme
-bluez
-bluez-utils
 bottom
 brightnessctl
 cava
