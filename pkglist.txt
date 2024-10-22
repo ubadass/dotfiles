@@ -45,6 +45,7 @@ noto-fonts-cjk
 noto-fonts-emoji
 noto-fonts-extra
 nwg-look
+obs-studio
 openssh
 p7zip
 pamixer
@@ -67,6 +68,7 @@ systemd-resolvconf
 ttf-meslo-nerd
 udisks2
 unzip
+v4l2loopback-dkms
 vulkan-radeon
 wget
 wireguard-tools
