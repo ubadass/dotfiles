@@ -306,8 +306,7 @@ binds {
     // Suggested binds for running programs: terminal, app launcher, screen locker.
     Mod+Return { spawn "alacritty"; }
     Mod+D { spawn "anyrun"; }
-    Mod+B { spawn "firefox-nightly" "--private-window"; }
-    Mod+Shift+B { spawn "chromium" "--incognito"; }
+    Mod+B { spawn "firefox" "--private-window"; }
     Mod+V { spawn "bash" "-c" "cliphist list | anyrun --plugins libstdin.so | cliphist decode | wl-copy"; }
     // Super+Alt+L { spawn "swaylock"; }
 
